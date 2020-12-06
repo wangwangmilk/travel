@@ -2,12 +2,30 @@
   <div class="search">
     <div class="search-left"><span class="iconfont backicon">&#xe624;</span></div>
     <div class="search-center"><span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
-    <div class="search-right">城市<span class="iconfont">&#xe62d;</span></div>
+    <div class="search-right">{{city}}<span class="iconfont">&#xe62d;</span></div>
   </div>
 </template>
 <script>
 export default {
-  name: 'search'
+  name: 'search',
+  data () {
+    return {
+
+    }
+  },
+  props: {
+    city: {
+      type: String,
+      default: ''
+    }
+  },
+  watch: {
+
+  },
+  mounted () {
+
+  }
+
 }
 </script>
 <style  scoped>
@@ -16,6 +34,11 @@ export default {
     display:flex;
 line-height: .86rem;
 background: #00bcd4;
+/* position: fixed;
+top:0;
+left:0;
+right:0;
+z-index:99; */
  }
 .search .search-left {
    float:left;
