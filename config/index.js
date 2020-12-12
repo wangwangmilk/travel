@@ -12,7 +12,7 @@ module.exports = {
     // axios请求写的是api，会走static,这里有问题！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
     proxyTable: {
       "/api": {
-        target: "http://localhost:8081",
+        target: "http://localhost:8080",
         pathRewrite: {
           "^/api": "/static/mock"
         }
