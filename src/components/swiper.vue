@@ -76,6 +76,7 @@ export default {
   padding-bottom:31.25%;
   background: #eee;
   /* height:31.25vw; */
+  margin-top:.62rem;
 }
 
 .swiper-width {

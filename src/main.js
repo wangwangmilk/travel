@@ -6,6 +6,8 @@ import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
+
 // require('swiper/dist/css/swiper.css')
 // import 'swiper/css/swiper.css'
 // import style (>= Swiper 6.x)
@@ -21,5 +23,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
