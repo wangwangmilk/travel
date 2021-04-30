@@ -1,5 +1,6 @@
 <template>
   <div>
+    <huakuai  @verify='verify' @refresh='refresh'></huakuai>
     <home-search></home-search>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
@@ -53,8 +54,13 @@ export default {
           this.weekendList = data.weekendList
         }
       })
+    },
+    verify (result) {
+      console.log(result) // result为true表示验证通过，false表示验证三次都失败了哦
+    },
+    refresh () {
+      console.log('用户点击了初始化')
     }
-
   },
   activated () {
     console.log('lastCity', this.lastCity)

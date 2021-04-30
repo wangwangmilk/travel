@@ -2,7 +2,7 @@
   <div class="recommend">
     <div class="title">热门推荐</div>
     <!-- 全局引入1pxbordercss后，直接加样式即可 -->
-    <div class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <div class="item border-bottom" v-for="item of recommendList" :key="item.id" @click="toDetail">
       <img class="item-img" :src="item.imgUrl" alt="">
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -27,6 +27,12 @@ export default {
         imgUrl: 'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_140x140_73fda71d.jpg',
         title: '天津南开水上公园',
         desc: '浪漫的天津首站，浪漫的海洋主题乐园'}]
+    }
+  },
+  methods: {
+    toDetail () {
+      console.log('222')
+      this.$router.push('/detail')
     }
   }
 }
